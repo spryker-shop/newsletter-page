@@ -1,1 +1,0 @@
-# Spryker Commerce OS
