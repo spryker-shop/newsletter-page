@@ -18,9 +18,6 @@ class NewsletterSubscriptionFormDataProvider
      */
     protected $newsletterClient;
 
-    /**
-     * @param \SprykerShop\Yves\NewsletterPage\Dependency\Client\NewsletterPageToNewsletterClientInterface $newsletterClient
-     */
     public function __construct(NewsletterPageToNewsletterClientInterface $newsletterClient)
     {
         $this->newsletterClient = $newsletterClient;
@@ -46,11 +43,6 @@ class NewsletterSubscriptionFormDataProvider
         return [];
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\NewsletterSubscriptionRequestTransfer $newsletterSubscriptionRequestTransfer
-     *
-     * @return bool
-     */
     protected function isSubscribed(NewsletterSubscriptionRequestTransfer $newsletterSubscriptionRequestTransfer): bool
     {
         $subscriptionResultTransfer = $this->newsletterClient->checkSubscription($newsletterSubscriptionRequestTransfer);

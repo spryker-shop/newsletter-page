@@ -43,17 +43,11 @@ class NewsletterPageFactory extends AbstractFactory
         return $this->getProvidedDependency(ApplicationConstants::FORM_FACTORY);
     }
 
-    /**
-     * @return \SprykerShop\Yves\NewsletterPage\Dependency\Client\NewsletterPageToNewsletterClientInterface
-     */
     public function getNewsletterClient(): NewsletterPageToNewsletterClientInterface
     {
         return $this->getProvidedDependency(NewsletterPageDependencyProvider::CLIENT_NEWSLETTER);
     }
 
-    /**
-     * @return \SprykerShop\Yves\NewsletterPage\Dependency\Client\NewsletterPageToCustomerClientInterface
-     */
     public function getCustomerClient(): NewsletterPageToCustomerClientInterface
     {
         return $this->getProvidedDependency(NewsletterPageDependencyProvider::CLIENT_CUSTOMER);

@@ -41,11 +41,6 @@ class NewsletterPageRouteProviderPlugin extends AbstractRouteProviderPlugin
         return $routeCollection;
     }
 
-    /**
-     * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
-     *
-     * @return \Spryker\Yves\Router\Route\RouteCollection
-     */
     protected function addNewsletterRoute(RouteCollection $routeCollection): RouteCollection
     {
         $route = $this->buildRoute('/customer/newsletter', 'NewsletterPage', 'Newsletter', 'indexAction');
